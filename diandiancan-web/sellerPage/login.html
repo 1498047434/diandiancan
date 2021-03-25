@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Canvas</title>
+     <script src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
+     <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+     <script src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+     <script src="http://cdn.datatables.net/plug-ins/28e7751dbec/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.6.4.min.js">
+  	
+  </script>
+  <style type="text/css">
+	*{margin:0px;padding:0px}
+	html,body{height:100%;}
+	#canvas{display:block;background:#000;}
+	.container{width: 100%;height: 100%;position: absolute;}
+	
+  </style>
+ </head>
+ <body>
+	<div class="container">
+		<div class="login_form">
+			<div class="login_title">
+				<h1>用户登录</h1>
+				<a href="register.html">立即注册</a>
+			</div>
+			<div class="form_input" >
+					<input class="name_input" type="text" name="username" id="username" placeholder="请输入用户名" />
+					<div class="user_error">输入错误</div>
+					<input class="pwd_input" type="password" name="pwd" id="userpwd" placeholder="请输入密码 "/>
+					<div class="pwd_error">输入错误</div>
+					
+					<div class="more_input">
+						<input type="checkbox" name="" id="checkbox"  />
+						<label for="checkbox">记住用户名</label>
+						<a href="#">忘记密码</a>
+					</div>
+					<input class="input_submit" type="submit" name="" id="" value="登录" />
+					<!--<input class="input_submit" type="submit" name="" id="" value="登录" />-->
+			</div>
+		</div>
+	</div>
+ 	
+  <canvas id="canvas"></canvas>
+  <script>
+	var can=document.getElementById("canvas");
+	// 设置绘图环境 
+	var cxt = can.getContext("2d");
+	// 获取浏览器窗口的宽高
+	var w=can.width=window.innerWidth;
+	var h=can.height=window.innerHeight;
+	// 让画布的狂高虽浏览器的变化而变化
+	window.onresize = function(){
+		w=can.width=window.innerWidth;
+		h=can.height=window.innerHeight;
+	}
+	// 设置画笔的颜色
+	//cxt.fillStyle="red";
+	// 绘制矩形
+	//cxt.fillRect(0,0,50,50);// 绘制的坐标点：x,y w h
+	// cxt.fill()；填充方法(实心) cxt.stroke();触笔方法(空心)
+	// cxt.rect()；规定矩形的路径
+	// 绘制圆形
+	//cxt.arc(250,250,50, 0,Math.PI*2,false);// x , y , r ,从0度角逆时针360（弧度值）   逆时针
+	//cxt.fill();
+
+
+	// 定时器
+	/*setInterval(function(){
+		
+		
+		cxt.clearRect();// 清楚画布内容
+		1000ms/60视觉感要更好
+	},)*/
+	/*function move(){
+		
+	}*/
+	
+
+	//面向对象
+	var drops = [];
+	// 创建雨滴对象
+	function Drop(){}
+	// 添加对象方法
+	Drop.prototype={
+		init:function(){// 自定义的 初始化方法
+			// 设置坐标
+			this.x = random(0,w);
+			this.y = 0;
+			// y方向的速度值
+			this.vy = random(4,5);
+			// 雨滴下落的最大高度
+			this.l=random(0.8*h,0.9*h);
+			// 添加波纹的初始半径
+			this.r=1;
+			this.vr=1;// 半径增大的速度
+			// 判断雨滴消失的透明度
+			this.a=1;// 最终去向于0
+			this.va=0.96;// 透明度的变化系数
+		},
+		draw:function(){// 绘制图形
+			if(this.y>this.l){// 雨滴已经下落到指定位置  开始绘制圆形
+				cxt.beginPath();// 先开始路径
+				cxt.arc(this.x,this.y,this.r,0,Math.PI*2,false);
+				cxt.strokeStyle="rgba(0,255,255,"+this.a+")";
+				cxt.stroke();
+			}else{// 绘制下落雨滴
+				cxt.fillStyle="rgb(0,255,255)";
+				cxt.fillRect(this.x,this.y,2,10);
+			}			
+			this.update();
+		},
+		update:function(){//更新坐标位置
+			if(this.y<this.l){
+				this.y+=this.vy;
+			}else{// 雨滴到达指定位置
+				if(this.a>0.03){
+					this.r+=this.vr;
+					if(this.r>50){
+						this.a*=this.va;
+					}
+				}else{
+					// 重新初始化雨滴数据
+					this.init();
+				}
+			}
+		}
+	}
+
+	// 新建一个雨滴实例化对象
+	//var drop=new Drop();
+	//drop.init();//初始化
+	//drop.draw();//绘制
+
+	for(var i=0;i<30;i++){
+		// 延迟雨滴出现的时间
+		setTimeout(function(){
+			var drop=new Drop();
+			drop.init();
+			drops.push(drop);
+		},i*300)
+	}
+	console.log(drops);
+
+	function move(){
+		//cxt.clearRect(0,0,w,h); // 重绘整个界面
+		// 先绘制透明层在绘制雨滴  雨滴
+		//cxt.fillStyle="rgba(255,240,245,0.1)";
+		cxt.fillStyle="rgba(252,252,252,0.1)";
+		cxt.fillRect(0,0,w,h);
+		for(var i=0;i<drops.length;i++){
+			drops[i].draw();
+		}
+		requestAnimationFrame(move);// 1000ms/60
+	}
+	move();
+	//生成随机数的方法
+	function random(min,max){
+		return Math.random()*(max-min) + min;// 生成一个min 到 max之间的随机数
+	}
+
+  </script>
+ <script type="text/javascript">
+ 	$(function(){
+ 		$('.input_submit').bind('click',function(event){
+ 			console.log("登录");
+
+ 			var username = $('#username').val();
+ 			var userpwd = $('#userpwd').val();
+ 			var savename = $('#checkbox').is(':checked');
+ 			data={
+ 					"username":username,
+ 					"password":userpwd
+ 					//"user_save":savename
+ 			}
+ 			console.log(data);
+ 			$.ajax({
+				type:"post",
+				url:"/candiandian/seller/user/login_seller",
+                async:true,
+                data:data,
+                dataType:"json",//从服务器返回数据类型
+                success:function(data){
+                //console.log("-----------------------------"+data);
+                console.log(data);
+                    window.location.href = "/candiandian/sellerPage/index.html";
+            },
+            error:function(data){
+                console.log(data);
+                alert("您输入有误，请重新输入");
+                $('#userpwd').html(" ");
+            }
+        });
+
+ 		})
+ 	})
+ </script>
+ </body>
+</html>

@@ -1,0 +1,66 @@
+2019-04-11 13:21:18.560  WARN 4452 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-11 13:21:19.493  WARN 4452 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-04-11 19:33:44.236  WARN 9968 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-11 19:33:44.964  WARN 9968 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-04-11 19:38:43.750  WARN 15968 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-11 19:38:44.210  WARN 15968 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-04-11 19:43:57.219  WARN 208 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-11 19:43:57.808  WARN 208 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-04-11 20:03:28.629  WARN 10032 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'enableRedisKeyspaceNotificationsInitializer' defined in class path resource [org/springframework/session/data/redis/config/annotation/web/http/RedisHttpSessionConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Cannot get Jedis connection; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+2019-04-11 20:14:40.797  WARN 14408 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-11 20:14:41.291  WARN 14408 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-04-11 20:32:36.883  WARN 12472 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-11 20:32:37.371  WARN 12472 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-04-11 20:37:56.882  WARN 6516 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-11 20:37:57.373  WARN 6516 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-04-11 20:40:46.405  WARN 6516 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : Request method 'GET' not supported
+2019-04-11 20:40:48.241  WARN 6516 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : Request method 'GET' not supported
+2019-04-11 20:40:48.437  WARN 6516 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : Request method 'GET' not supported
+2019-04-11 20:41:25.940  WARN 6516 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : Request method 'GET' not supported
+2019-04-11 20:42:03.086  WARN 4280 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-11 20:42:03.586  WARN 4280 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-04-11 20:45:37.062  WARN 4280 --- [redisMessageListenerContainer-3] o.s.d.r.l.RedisMessageListenerContainer  : Execution of message listener failed, and no ErrorHandler has been set.
+
+org.springframework.data.redis.serializer.SerializationException: Cannot deserialize; nested exception is org.springframework.core.serializer.support.SerializationFailedException: Failed to deserialize payload. Is the byte array a result of corresponding serialization for DefaultDeserializer?; nested exception is java.io.InvalidClassException: cn.edkso.candiandian.domain.Store; local class incompatible: stream classdesc serialVersionUID = -1564818245961803451, local class serialVersionUID = 942986685338815219
+	at org.springframework.data.redis.serializer.JdkSerializationRedisSerializer.deserialize(JdkSerializationRedisSerializer.java:82)
+	at org.springframework.data.redis.core.AbstractOperations.deserializeHashValue(AbstractOperations.java:338)
+	at org.springframework.data.redis.core.AbstractOperations.deserializeHashMap(AbstractOperations.java:282)
+	at org.springframework.data.redis.core.DefaultHashOperations.entries(DefaultHashOperations.java:227)
+	at org.springframework.data.redis.core.DefaultBoundHashOperations.entries(DefaultBoundHashOperations.java:102)
+	at org.springframework.session.data.redis.RedisOperationsSessionRepository.getSession(RedisOperationsSessionRepository.java:432)
+	at org.springframework.session.data.redis.RedisOperationsSessionRepository.onMessage(RedisOperationsSessionRepository.java:519)
+	at org.springframework.data.redis.listener.RedisMessageListenerContainer.executeListener(RedisMessageListenerContainer.java:249)
+	at org.springframework.data.redis.listener.RedisMessageListenerContainer.processMessage(RedisMessageListenerContainer.java:239)
+	at org.springframework.data.redis.listener.RedisMessageListenerContainer$1.run(RedisMessageListenerContainer.java:967)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.core.serializer.support.SerializationFailedException: Failed to deserialize payload. Is the byte array a result of corresponding serialization for DefaultDeserializer?; nested exception is java.io.InvalidClassException: cn.edkso.candiandian.domain.Store; local class incompatible: stream classdesc serialVersionUID = -1564818245961803451, local class serialVersionUID = 942986685338815219
+	at org.springframework.core.serializer.support.DeserializingConverter.convert(DeserializingConverter.java:78)
+	at org.springframework.core.serializer.support.DeserializingConverter.convert(DeserializingConverter.java:36)
+	at org.springframework.data.redis.serializer.JdkSerializationRedisSerializer.deserialize(JdkSerializationRedisSerializer.java:80)
+	... 10 common frames omitted
+Caused by: java.io.InvalidClassException: cn.edkso.candiandian.domain.Store; local class incompatible: stream classdesc serialVersionUID = -1564818245961803451, local class serialVersionUID = 942986685338815219
+	at java.io.ObjectStreamClass.initNonProxy(ObjectStreamClass.java:699)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1885)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1751)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2042)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1573)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:431)
+	at org.springframework.core.serializer.DefaultDeserializer.deserialize(DefaultDeserializer.java:70)
+	at org.springframework.core.serializer.support.DeserializingConverter.convert(DeserializingConverter.java:73)
+	... 12 common frames omitted
+
+2019-04-11 20:48:27.048  WARN 6772 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-11 20:48:27.503  WARN 6772 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-04-11 20:57:48.396  WARN 14320 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-11 20:57:48.889  WARN 14320 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-04-11 21:00:42.760  WARN 15508 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-11 21:00:43.232  WARN 15508 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-04-11 21:02:19.472  WARN 16548 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-11 21:02:19.987  WARN 16548 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-04-11 21:04:50.487  WARN 72 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-11 21:04:51.014  WARN 72 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-04-11 21:07:24.254  WARN 11120 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-11 21:07:24.711  WARN 11120 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-04-11 21:15:08.663  WARN 15540 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-11 21:15:09.119  WARN 15540 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-04-11 21:48:27.873  WARN 15540 --- [http-nio-8080-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01

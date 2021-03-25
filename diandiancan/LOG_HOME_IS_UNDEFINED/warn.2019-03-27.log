@@ -1,0 +1,34 @@
+2019-03-27 15:38:53.537  WARN 14960 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-03-27 15:38:54.263  WARN 14960 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-03-27 16:46:54.882  WARN 14960 --- [http-nio-8080-exec-4] net.sf.json.JSONObject                   : Tried to assign property language:java.lang.String to bean of class cn.edkso.candiandian.domain.User
+2019-03-27 16:46:57.581  WARN 14960 --- [http-nio-8080-exec-7] net.sf.json.JSONObject                   : Tried to assign property language:java.lang.String to bean of class cn.edkso.candiandian.domain.User
+2019-03-27 20:14:16.005  WARN 7600 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-03-27 20:14:17.305  WARN 7600 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-03-27 20:17:17.269  WARN 12744 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-03-27 20:17:17.690  WARN 12744 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-03-27 20:30:59.822  WARN 11976 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-03-27 20:31:00.276  WARN 11976 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-03-27 20:31:36.013  WARN 4084 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-03-27 20:31:36.448  WARN 4084 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-03-27 20:33:41.043  WARN 1944 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-03-27 20:33:41.606  WARN 1944 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-03-27 20:34:22.793  WARN 2636 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-03-27 20:34:23.342  WARN 2636 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-03-27 20:38:20.833  WARN 9780 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-03-27 20:38:21.454  WARN 9780 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-03-27 21:49:06.995  WARN 9780 --- [http-nio-8080-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01
+2019-03-27 21:49:06.995  WARN 9780 --- [http-nio-8080-exec-17] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01
+2019-03-27 21:49:06.996  WARN 9780 --- [http-nio-8080-exec-16] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01
+2019-03-27 21:49:06.997  WARN 9780 --- [http-nio-8080-exec-12] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01
+2019-03-27 21:49:06.998  WARN 9780 --- [http-nio-8080-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01
+2019-03-27 21:49:06.998  WARN 9780 --- [http-nio-8080-exec-11] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01
+2019-03-27 21:49:06.999  WARN 9780 --- [http-nio-8080-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01
+2019-03-27 21:49:06.999  WARN 9780 --- [http-nio-8080-exec-10] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01
+2019-03-27 21:49:06.998  WARN 9780 --- [http-nio-8080-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01
+2019-03-27 21:49:06.999  WARN 9780 --- [http-nio-8080-exec-9] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01
+2019-03-27 21:49:06.999  WARN 9780 --- [http-nio-8080-exec-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01
+2019-03-27 21:49:07.000  WARN 9780 --- [http-nio-8080-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01
+2019-03-27 21:49:06.999  WARN 9780 --- [http-nio-8080-exec-7] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01
+2019-03-27 21:49:07.000  WARN 9780 --- [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01
+2019-03-27 21:49:07.190  WARN 9780 --- [http-nio-8080-exec-21] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01
+2019-03-27 23:50:51.070  WARN 9780 --- [http-nio-8080-exec-12] net.sf.json.JSONObject                   : Tried to assign property language:java.lang.String to bean of class cn.edkso.candiandian.domain.User

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/userInfo.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" href="css/jquery-ui.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+		<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js" ></script>
+		<script>
+			$(function() {
+
+				$("#dialog_message").hide();
+				$(".save_info").hide();
+				ajax();
+			});
+			function ajax(){
+				$.ajax({
+					type:"post",
+					url:"/candiandian/buyer/store/storeInfo",
+					async:true,
+					dataType:"json" ,// 从服务器返回的数据类型
+					success:function(data){
+						console.log(data);
+						var id = data.id;
+						var num = data.num;
+						var username = data.username;
+						var password = data.password;
+						var name = data.name;
+						var phone = data.phone;
+						var linkman = data.linkman;
+						var status = data.status;
+						var registerTime = data.registerTime;
+						$("#user_name").val(username);
+						$("#user_age").val(name);
+						$("#user_phone").val(linkman);
+						$("#user_email").val(phone);
+						$("#user_qq").val(status);
+						$("#user_time").val(registerTime);
+
+					},
+					error:function () {
+						console.log("异常");
+					}
+					});
+			}
+		</script>
+	</head>
+	<body>
+		<div id="dialog_message" >
+				<div class="dialog_title">
+					修改密码 
+					<i  id="fa_times" class="fa fa fa-times fa-2x" aria-hidden="true" style="cursor: pointer;" ></i>
+				</div>
+				<div class="dialog_old">
+					<label>原&nbsp;&nbsp;密&nbsp;&nbsp;码</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="password" />
+				</div>
+				<div class="dialog_old">
+					<label>新&nbsp;&nbsp;密&nbsp;&nbsp;码</label>&nbsp;&nbsp;&nbsp;&nbsp<input type="text" name="password" />
+				</div>
+				<div class="dialog_old">
+					<label>确认密码</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="password" />
+				</div>
+				<div class="submit" style="cursor: pointer;" id="submit">
+					确认修改
+				</div>
+		</div>
+		<div class="container">
+			<div class="title">
+				个人信息
+			</div>
+			
+			<div class="div1" onclick="showDialog()">
+				修改密码
+			</div>
+			<div class="left">
+				<div class="info clearfix">
+					<div class="label fl">用户名 :</div>
+					<div class="lable_input fr"><input type="text" name="user_name" id="user_name" value="张小泉" disabled></div>
+				</div>
+				
+				<div class="info clearfix">
+					<div class="label fl">店铺 :</div>
+					<div class="lable_input fr"><input type="text" name="user_age" id="user_age" value="24" disabled/></div>
+				</div>
+				<div class="info clearfix">
+					<div class="label fl">联系人 :</div><div class="lable_input fr"><input type="text" name="user_phone" id="user_phone" value="15036110514" disabled/></div>
+				</div>
+				<div class="info clearfix">
+					<div class="label fl">移动电话 :</div><div class="lable_input fr"><input type="text" name="user_email" id="user_email" value="2875647253@qq.com" disabled/></div>
+				</div>
+				<div class="info clearfix">
+					<div class="label fl">状态 :</div><div class="lable_input fr "><input type="text" name="user_qq" id="user_qq" value="2875647253" disabled/></div>
+				</div>
+				<div class="info clearfix">
+					<div class="label fl">注册时间 :</div><div class="lable_input fr"><input type="text" name="user_time" id="user_time" value="2019-3-4" disabled/></div>
+				</div>
+				<div class="replace_info fl" >
+					修改信息
+				</div>
+				<div class="save_info fr">
+					保存信息
+				</div>
+			</div>
+			<div class="right">
+				<div class="right_title">
+					管理员登录
+				</div>
+				<table border="0" cellspacing="0" cellpadding="0" width="100%" class="table">
+					<tr>
+						<th width="10%">类型</th>
+						<th width="15">内容</th>
+						<th width="15">用户名</th>
+						<th width="30">登录IP</th>
+						<th width="30%">登录时间</th>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>登陆成功</td>
+						<td>admin</td>
+						<td>10.85.16.64</td>
+						<td>2019-3-9</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		console.log(document.body.clientWidth);
+		console.log(document.body.clientHeight);
+		var width=document.body.clientWidth-100;
+		var height=document.body.clientHeight-50;
+		$('#dialog_message').css({marginTop:"141px",marginLeft:"511px"});
+		function showDialog() {
+				$('body').css({background:"rgb(179,179,179)"});
+				$("#dialog_message").css({background:"white"});
+				$('.div1').css({background:"rgb(179,128,58)",color:"rgb(177,177,177)"});
+				$('.left').css({borderRight:"solid 1px rgb(155,155,155)"})
+				$('#dialog_message').fadeIn(2000,'swing');
+				$('.replace_info').css({background:"rgb(147,64,50)",color:"rgb(177,177,177)"});
+				$('table tr th').css({background:"rgb(179,179,179)"});
+				$('table tr th').css({border:"1px solid rgb(179,179,179)"});
+				$('table tr td').css({border:"1px solid rgb(179,179,179)"});
+			}
+		$(function(){
+			$('#submit').bind('click',function(){
+				$("#dialog_message").fadeOut(1000,'swing',function(){
+					$('body').css({background:"white"});
+					$('.div1').css({background:"rgb(255,183,82)",color:"white"})
+					$('.left').css({borderRight:"solid 1px #DDD"});
+					$('.replace_info').css({background:"rgb(209,91,71)",color:"white"});
+					$('.table th').css({background:"rgb(242,242,242)"});
+					$('table tr th').css({background:"rgb(242,242,242)"});
+					$('table tr th').css({border:"1px solid #ddd"});
+					$('table tr td').css({border:"1px solid #ddd"});	
+				});
+			});
+			$('.replace_info').bind('click',function(){
+				//$('#areaSelect').attr("disabled",true);
+				//$('#areaSelect').attr("disabled","disabled");
+//				$('#areaSelect').attr("disabled",false);
+//				$('#areaSelect').removeAttr("disabled");
+//				$('#areaSelect').attr("disabled","");
+
+				$('.container input').css({border:"solid 1px rgb(221,221,221)",display:"block"});
+				$('.container input').removeAttr("disabled");
+				$('.container input').removeAttr("hidden");
+				$('.container input').removeAttr("checked");
+				$('#man').css({display:"block"});
+				$('table tr th').css({background:"rgb(242,242,242)"});
+				$('.save_info').fadeIn(1000,'swing');
+
+
+				
+			});
+			$('.save_info').bind('click',function(){
+				$('.container input').css({border:"0"});
+				$('.container input').attr("disabled");
+				$('.container input').attr("hidden");
+				$('#men').attr("checked");
+				$('#man').css({display:"none"});
+				$('.input_radio').css({display:"none"});
+				$('.save_info').attr("disabled",true);
+				$('.save_info').fadeOut(1000,'swing');
+				$('.dialog_old input').css({border:"solid 1px rgb(213,213,213)"});
+
+				var user_name = $('#user_name').val(); // 用户名
+				var user_age = $('#user_age').val();// 用户店铺号
+				var user_phone = $('#user_phone').val();// 用户联系人
+				var user_email = $('#user_email').val();// 用户电话
+				var user_qq = $('#user_qq').val();  // 用户状态
+				var user_time = $('#user_time').val();// 用户注册时间
+				data={
+					name:user_name,
+					linkman:user_phone,
+					status : user_qq,
+					phone : user_email,
+					registerTime : user_time,
+					restaurantId : user_age
+
+				}
+				$.ajax({
+					type:"post",
+					url:"/candiandian/buyer/user/update",
+					async:true,
+					data:data,
+					success:function(data){
+						console.log("成功");
+
+					}
+				})
+			});
+			$('#fa_times').bind('click',function(){
+				$("#dialog_message").fadeOut(1000,'swing',function(){
+					$('body').css({background:"white"});
+					$('.div1').css({background:"rgb(255,183,82)",color:"white"})
+					$('.left').css({borderRight:"solid 1px #DDD"});
+					$('.replace_info').css({background:"rgb(209,91,71)",color:"white"});
+					$('.table th').css({background:"rgb(242,242,242)"});
+					$('table tr th').css({background:"rgb(242,242,242)"});
+					$('table tr th').css({border:"1px solid #ddd"});
+					$('table tr td').css({border:"1px solid #ddd"});	
+				});
+			});
+		})
+	</script>
+</html>

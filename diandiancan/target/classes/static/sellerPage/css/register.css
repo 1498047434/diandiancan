@@ -1,0 +1,75 @@
+html,body{height: 100%;}
+.container{width: 100%;height: 100%;position: absolute;}
+.con{width:400px;margin-right: 450px;margin-top:100px;}
+.title{width:360px;height:50px;float:left;
+		margin-left:30px;border-bottom:1px solid #e0e0e0}
+.title h1{height:50px;line-height:50px;float:left;
+		font-size:24px;color:#a8a8a8;font-weight:bold;}
+.title a{float:right;height:20px;line-height:20px;
+		font-size:16px;color:#666;padding-right:20px;
+		background:url(../img/go.png) 32px -1px no-repeat;margin-top:15px}
+
+.form{width:360px;margin:30px 0 0 30px;float:left;position:relative;}
+.form li{height:70px;}
+.form li label{width:70px;height:40px;line-height:40px;
+		float:left;font-size:14px;color:#a8a8a8}
+.form li input{width:288px;height:38px;border:1px solid #e0e0e0;
+		float:left;outline:none;text-indent:10px;background-color:#f8f8f8}
+.form li.agreement input{width:15px;height:15px;float:left;margin-top:13px}
+.form li.agreement label{width:300px;float:left;margin-left:10px;}
+.form li.register{width:360px;height:40px;background-color:rgb(	216,191,216);font-size:18px;color:#fff;font-family:'Microsoft Yahei';
+			text-align: center;line-height: 40px; cursor:pointer;}
+.form li .error{float:left;height:30px;line-height:30px;margin-left:70px;color:#e62e2e;display:none;}
+.form li .error2{float:left;height:20px;line-height:20px;color:#e62e2e;display:none;}
+.option{position: absolute;width: 180px;height: 50px;margin-left: 180px;
+			margin-top: -7px;line-height: 50px;font-size: 12px;color: #a8a8a8;}
+
+.select {
+		display: inline-block;
+		width: 130px;
+		position: relative;
+		vertical-align: middle;
+		padding: 0;
+		height: 30px;
+		line-height: 30px;
+		overflow: hidden;
+		background-color: #fff;
+		color: #555;
+		border: 1px solid #e0e0e0;
+		text-shadow: none;
+		border-radius: 4px;	
+		transition: box-shadow 0.25s ease;
+		z-index: 2;
+		color: #a8a8a8;
+	}
+ 
+	.select:hover {
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+	}
+ 
+	.select:before {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 0;
+		border: 10px solid transparent;
+		border-top-color: #ccc;
+		top: 14px;
+		right: 10px;
+		cursor: pointer;
+		z-index: -2;
+	}
+	.select select {
+		cursor: pointer;
+		padding: 10px;
+		width: 100%;
+		border: none;
+		background: transparent;
+		background-image: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+	}
+ 
+	.select select:focus {
+		outline: none;
+	}

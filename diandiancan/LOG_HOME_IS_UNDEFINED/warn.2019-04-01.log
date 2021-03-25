@@ -1,0 +1,23 @@
+2019-04-01 08:22:47.975  WARN 10596 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-01 08:22:48.797  WARN 10596 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-04-01 09:00:20.188  WARN 7180 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-01 09:00:20.683  WARN 7180 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-04-01 13:42:28.325  WARN 7528 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-01 13:42:29.092  WARN 7528 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-04-01 13:48:31.949  WARN 7528 --- [http-nio-8080-exec-11] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1048, SQLState: 23000
+2019-04-01 13:48:51.215  WARN 7528 --- [http-nio-8080-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1048, SQLState: 23000
+2019-04-01 13:51:46.793  WARN 14284 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-01 13:51:47.327  WARN 14284 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-04-01 13:54:33.776  WARN 2244 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-01 13:54:34.369  WARN 2244 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-04-01 13:56:36.005  WARN 9052 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-01 13:56:36.517  WARN 9052 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-04-01 22:54:21.588  WARN 9052 --- [http-nio-8080-exec-1] net.sf.json.JSONObject                   : Tried to assign property language:java.lang.String to bean of class cn.edkso.candiandian.domain.User
+2019-04-01 22:54:21.588  WARN 9052 --- [http-nio-8080-exec-10] net.sf.json.JSONObject                   : Tried to assign property language:java.lang.String to bean of class cn.edkso.candiandian.domain.User
+2019-04-01 22:54:21.762  WARN 9052 --- [http-nio-8080-exec-9] net.sf.json.JSONObject                   : Tried to assign property language:java.lang.String to bean of class cn.edkso.candiandian.domain.User
+2019-04-01 22:54:21.946  WARN 9052 --- [http-nio-8080-exec-10] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1062, SQLState: 23000
+2019-04-01 22:54:21.970  WARN 9052 --- [http-nio-8080-exec-9] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1062, SQLState: 23000
+2019-04-01 22:54:22.005  WARN 9052 --- [http-nio-8080-exec-3] net.sf.json.JSONObject                   : Tried to assign property language:java.lang.String to bean of class cn.edkso.candiandian.domain.User
+2019-04-01 22:54:22.453  WARN 9052 --- [http-nio-8080-exec-7] net.sf.json.JSONObject                   : Tried to assign property language:java.lang.String to bean of class cn.edkso.candiandian.domain.User
+2019-04-01 22:54:23.319  WARN 9052 --- [http-nio-8080-exec-4] net.sf.json.JSONObject                   : Tried to assign property language:java.lang.String to bean of class cn.edkso.candiandian.domain.User
+2019-04-01 22:54:23.658  WARN 9052 --- [http-nio-8080-exec-6] net.sf.json.JSONObject                   : Tried to assign property language:java.lang.String to bean of class cn.edkso.candiandian.domain.User

@@ -1,0 +1,33 @@
+*{margin: 0;padding: 0;font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;font-size: 13px;}
+.container{width: 1200px;height: 550px;margin: 10px auto;}
+.title{width: 100%;/*background: rgb(246,246,246);*/height: 30px;line-height: 30px;padding-left: 30px;
+	/*border-bottom: solid 1px rgb(221,221,221);*/}
+/*.right{position:absolute;width: 100px;height: 100px;background: red;}*/
+.left{width: 400px;height: 500px;margin-top: 20px;border-right: 1px solid #DDD;float: left;}
+.info{width: 260px;height: 40px;margin-top: 20px;/*border-right: 1px solid red;*/}
+.label{width: 35%;height: 40px;line-height: 40px;text-align: right;font-size: 14px;}
+.lable_input{width: 55%;height: 40px;line-height: 40px;}
+input[type='radio']{display: none;background: white;height:40px;line-height: 40px; }
+input[type='text']{border: 0;background: none;line-height: 40px;padding-left: 10px;}
+.info_radio{position: absolute;width: 80px;height: 40px;margin-left: 117px;line-height: 40px;}
+.div1{position: absolute;margin-top: 45px;margin-left: 286px;width: 90px;height: 30px;background: rgb(255,183,82);
+		text-align: center;line-height: 30px;border-radius: 5px;cursor: pointer;color: white;}
+#dialog_message{position: absolute;width: 300px;height: 300px;/*background: rgba(	230,230,250,0.5);*/}
+.dialog_title{width:275px;height:40px;line-height: 40px;padding-left: 25px;font-size: 14px;}
+.dialog_old{width: 300px;height: 40px;text-align: center;line-height: 40px; margin-top: 10px;}
+.dialog_old input{border:solid 1px rgb(213,213,213);padding-left: 10px;width: 150px;height: 25px;}
+.dialog_old label{font-size: 14px;}
+.submit{background:rgb(47,141,237);width: 70px;height: 40px;text-align: center;line-height: 40px;font-size: 14px;
+			color:white;margin-left: 105px;margin-top: 40px;border-radius: 5px;}
+.replace_info,.save_info{height:20px;width: 100px;background: rgb(209,91,71);height: 40px;line-height: 40px;color: white;
+			margin-top: 30px;	text-align: center;border-radius: 5px;cursor: pointer;}
+.save_info{margin-right: 140px;background: rgb(111,174,217);}
+#man{color: #666;display: none;}
+.right{float: right;width: 700px;height: 400px;/*background: cyan;*/margin-right: 50px;margin-top: 30px;}
+.right_title{height: 30px;width: 100%;text-align: center;line-height: 30px;font-size: 16px;}
+ table{border-collapse: collapse;margin: 0 auto;text-align: center;margin: 10px;}
+table td, table th{border: 1px solid #ddd; color: #666;height: 40px; }
+table tr th{background:rgb(242,242,242);width: 100px;color: rgb(84,128,185);font-size: 14px;}
+#fa_times{position: absolute;margin-left: 193px;margin-top: 5px;font-size: 1.5em;}
+
+

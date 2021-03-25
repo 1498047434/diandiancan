@@ -1,0 +1,164 @@
+2019-02-27 08:08:17.114  INFO 9160 --- [main] c.e.candiandian.CandiandianApplication   : Starting CandiandianApplication on DESKTOP-AA1U7VH with PID 9160 (started by 14980 in J:\learn\java\idea workspace\candiandian)
+2019-02-27 08:08:17.120  INFO 9160 --- [main] c.e.candiandian.CandiandianApplication   : No active profile set, falling back to default profiles: default
+2019-02-27 08:08:17.239  INFO 9160 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@55182842: startup date [Wed Feb 27 08:08:17 CST 2019]; root of context hierarchy
+2019-02-27 08:08:17.372  INFO 9160 --- [background-preinit] o.h.validator.internal.util.Version      : HV000001: Hibernate Validator 5.3.5.Final
+2019-02-27 08:08:19.344  INFO 9160 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-02-27 08:08:19.359  INFO 9160 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-27 08:08:19.361  INFO 9160 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-02-27 08:08:19.520  INFO 9160 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/candiandian]   : Initializing Spring embedded WebApplicationContext
+2019-02-27 08:08:19.521  INFO 9160 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2281 ms
+2019-02-27 08:08:19.683  INFO 9160 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-02-27 08:08:19.688  INFO 9160 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-27 08:08:19.688  INFO 9160 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-27 08:08:19.689  INFO 9160 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-27 08:08:19.689  INFO 9160 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-27 08:08:34.700  INFO 9160 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-02-27 08:08:34.720  INFO 9160 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-27 08:08:34.888  INFO 9160 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2019-02-27 08:08:34.890  INFO 9160 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-02-27 08:08:34.891  INFO 9160 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2019-02-27 08:08:34.984  INFO 9160 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-02-27 08:08:35.229  INFO 9160 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-02-27 08:08:35.951  INFO 9160 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-27 08:08:36.526  INFO 9160 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@55182842: startup date [Wed Feb 27 08:08:17 CST 2019]; root of context hierarchy
+2019-02-27 08:08:36.594  INFO 9160 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/buyer/restaurant/list],methods=[POST]}" onto public java.util.List<cn.edkso.candiandian.domain.Restaurant> cn.edkso.candiandian.controller.RestaurantController.list(java.lang.Double,java.lang.Double)
+2019-02-27 08:08:36.595  INFO 9160 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/buyer/user/login],methods=[POST]}" onto public cn.edkso.candiandian.domain.User cn.edkso.candiandian.controller.UserController.login(cn.edkso.candiandian.form.UserInfoForm)
+2019-02-27 08:08:36.597  INFO 9160 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-02-27 08:08:36.598  INFO 9160 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-02-27 08:08:36.621  INFO 9160 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-27 08:08:36.622  INFO 9160 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-27 08:08:36.656  INFO 9160 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-27 08:08:36.944  INFO 9160 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-02-27 08:08:36.959  INFO 9160 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8080"]
+2019-02-27 08:08:36.968  INFO 9160 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8080"]
+2019-02-27 08:08:36.979  INFO 9160 --- [main] o.a.tomcat.util.net.NioSelectorPool      : Using a shared selector for servlet write/read
+2019-02-27 08:08:36.994  INFO 9160 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-02-27 08:08:36.999  INFO 9160 --- [main] c.e.candiandian.CandiandianApplication   : Started CandiandianApplication in 20.802 seconds (JVM running for 22.624)
+2019-02-27 08:09:55.828  INFO 9160 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/candiandian]   : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-02-27 08:09:55.829  INFO 9160 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-02-27 08:09:55.852  INFO 9160 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+2019-02-27 13:18:00.811  INFO 10304 --- [main] c.e.candiandian.CandiandianApplication   : Starting CandiandianApplication on DESKTOP-AA1U7VH with PID 10304 (started by Dingmengdi in J:\learn\java\idea workspace\candiandian)
+2019-02-27 13:18:00.841  INFO 10304 --- [main] c.e.candiandian.CandiandianApplication   : No active profile set, falling back to default profiles: default
+2019-02-27 13:18:01.011  INFO 10304 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@55182842: startup date [Wed Feb 27 13:18:01 CST 2019]; root of context hierarchy
+2019-02-27 13:18:01.211  INFO 10304 --- [background-preinit] o.h.validator.internal.util.Version      : HV000001: Hibernate Validator 5.3.5.Final
+2019-02-27 13:18:04.331  INFO 10304 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-02-27 13:18:04.356  INFO 10304 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-27 13:18:04.356  INFO 10304 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-02-27 13:18:04.543  INFO 10304 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/candiandian]   : Initializing Spring embedded WebApplicationContext
+2019-02-27 13:18:04.550  INFO 10304 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3539 ms
+2019-02-27 13:18:04.712  INFO 10304 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-02-27 13:18:04.722  INFO 10304 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-27 13:18:04.722  INFO 10304 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-27 13:18:04.722  INFO 10304 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-27 13:18:04.722  INFO 10304 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-27 13:18:07.360  INFO 10304 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-02-27 13:18:07.391  INFO 10304 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-27 13:18:07.553  INFO 10304 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2019-02-27 13:18:07.553  INFO 10304 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-02-27 13:18:07.553  INFO 10304 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2019-02-27 13:18:07.642  INFO 10304 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-02-27 13:18:07.873  INFO 10304 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-02-27 13:18:08.781  INFO 10304 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-27 13:18:09.371  INFO 10304 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@55182842: startup date [Wed Feb 27 13:18:01 CST 2019]; root of context hierarchy
+2019-02-27 13:18:09.431  INFO 10304 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/buyer/restaurant/list],methods=[POST]}" onto public java.util.List<cn.edkso.candiandian.domain.Restaurant> cn.edkso.candiandian.controller.RestaurantController.list(java.lang.Double,java.lang.Double)
+2019-02-27 13:18:09.441  INFO 10304 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/buyer/user/login],methods=[POST]}" onto public cn.edkso.candiandian.domain.User cn.edkso.candiandian.controller.UserController.login(cn.edkso.candiandian.form.UserInfoForm)
+2019-02-27 13:18:09.441  INFO 10304 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-02-27 13:18:09.441  INFO 10304 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-02-27 13:18:09.462  INFO 10304 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-27 13:18:09.462  INFO 10304 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-27 13:18:09.491  INFO 10304 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-27 13:18:09.831  INFO 10304 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-02-27 13:18:09.862  INFO 10304 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8080"]
+2019-02-27 13:18:09.871  INFO 10304 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8080"]
+2019-02-27 13:18:09.891  INFO 10304 --- [main] o.a.tomcat.util.net.NioSelectorPool      : Using a shared selector for servlet write/read
+2019-02-27 13:18:09.901  INFO 10304 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-02-27 13:18:09.911  INFO 10304 --- [main] c.e.candiandian.CandiandianApplication   : Started CandiandianApplication in 10.2 seconds (JVM running for 13.267)
+2019-02-27 13:20:35.082  INFO 10304 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/candiandian]   : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-02-27 13:20:35.082  INFO 10304 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-02-27 13:20:35.106  INFO 10304 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+2019-02-27 13:23:28.116  INFO 14636 --- [main] c.e.candiandian.CandiandianApplication   : Starting CandiandianApplication on DESKTOP-AA1U7VH with PID 14636 (started by Dingmengdi in J:\learn\java\idea workspace\candiandian)
+2019-02-27 13:23:28.118  INFO 14636 --- [main] c.e.candiandian.CandiandianApplication   : No active profile set, falling back to default profiles: default
+2019-02-27 13:23:28.348  INFO 14636 --- [background-preinit] o.h.validator.internal.util.Version      : HV000001: Hibernate Validator 5.3.5.Final
+2019-02-27 13:23:28.446  INFO 14636 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5fe94a96: startup date [Wed Feb 27 13:23:28 CST 2019]; root of context hierarchy
+2019-02-27 13:23:30.067  INFO 14636 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-02-27 13:23:30.077  INFO 14636 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-27 13:23:30.078  INFO 14636 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-02-27 13:23:30.199  INFO 14636 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/candiandian]   : Initializing Spring embedded WebApplicationContext
+2019-02-27 13:23:30.200  INFO 14636 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1755 ms
+2019-02-27 13:23:30.409  INFO 14636 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-02-27 13:23:30.415  INFO 14636 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-27 13:23:30.416  INFO 14636 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-27 13:23:30.417  INFO 14636 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-27 13:23:30.417  INFO 14636 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-27 13:23:32.744  INFO 14636 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-02-27 13:23:32.756  INFO 14636 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-27 13:23:32.836  INFO 14636 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2019-02-27 13:23:32.837  INFO 14636 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-02-27 13:23:32.838  INFO 14636 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2019-02-27 13:23:32.886  INFO 14636 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-02-27 13:23:33.019  INFO 14636 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-02-27 13:23:33.514  INFO 14636 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-27 13:23:34.048  INFO 14636 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5fe94a96: startup date [Wed Feb 27 13:23:28 CST 2019]; root of context hierarchy
+2019-02-27 13:23:34.131  INFO 14636 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/buyer/restaurant/list],methods=[POST]}" onto public java.util.List<cn.edkso.candiandian.domain.Restaurant> cn.edkso.candiandian.controller.RestaurantController.list(java.lang.Double,java.lang.Double)
+2019-02-27 13:23:34.133  INFO 14636 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/buyer/user/login],methods=[POST]}" onto public cn.edkso.candiandian.domain.User cn.edkso.candiandian.controller.UserController.login(cn.edkso.candiandian.form.UserInfoForm)
+2019-02-27 13:23:34.135  INFO 14636 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-02-27 13:23:34.136  INFO 14636 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-02-27 13:23:34.187  INFO 14636 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-27 13:23:34.187  INFO 14636 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-27 13:23:34.237  INFO 14636 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-27 13:23:34.737  INFO 14636 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-02-27 13:23:34.754  INFO 14636 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8080"]
+2019-02-27 13:23:34.762  INFO 14636 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8080"]
+2019-02-27 13:23:34.774  INFO 14636 --- [main] o.a.tomcat.util.net.NioSelectorPool      : Using a shared selector for servlet write/read
+2019-02-27 13:23:34.789  INFO 14636 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-02-27 13:23:34.793  INFO 14636 --- [main] c.e.candiandian.CandiandianApplication   : Started CandiandianApplication in 8.243 seconds (JVM running for 9.435)
+2019-02-27 13:23:36.858  INFO 14636 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/candiandian]   : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-02-27 13:23:36.858  INFO 14636 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-02-27 13:23:36.882  INFO 14636 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+2019-02-27 13:26:29.474  INFO 15088 --- [main] c.e.candiandian.CandiandianApplication   : Starting CandiandianApplication on DESKTOP-AA1U7VH with PID 15088 (started by Dingmengdi in J:\learn\java\idea workspace\candiandian)
+2019-02-27 13:26:29.476  INFO 15088 --- [main] c.e.candiandian.CandiandianApplication   : No active profile set, falling back to default profiles: default
+2019-02-27 13:26:29.786  INFO 15088 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@74235045: startup date [Wed Feb 27 13:26:29 CST 2019]; root of context hierarchy
+2019-02-27 13:26:29.825  INFO 15088 --- [background-preinit] o.h.validator.internal.util.Version      : HV000001: Hibernate Validator 5.3.5.Final
+2019-02-27 13:26:31.829  INFO 15088 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-02-27 13:26:31.839  INFO 15088 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-27 13:26:31.840  INFO 15088 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-02-27 13:26:31.965  INFO 15088 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/candiandian]   : Initializing Spring embedded WebApplicationContext
+2019-02-27 13:26:31.965  INFO 15088 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2179 ms
+2019-02-27 13:26:32.145  INFO 15088 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-02-27 13:26:32.149  INFO 15088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-27 13:26:32.151  INFO 15088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-27 13:26:32.151  INFO 15088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-27 13:26:32.152  INFO 15088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-27 13:26:34.334  INFO 15088 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-02-27 13:26:34.346  INFO 15088 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-27 13:26:34.411  INFO 15088 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2019-02-27 13:26:34.413  INFO 15088 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-02-27 13:26:34.414  INFO 15088 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2019-02-27 13:26:34.457  INFO 15088 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-02-27 13:26:34.564  INFO 15088 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-02-27 13:26:35.025  INFO 15088 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-27 13:26:35.521  INFO 15088 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@74235045: startup date [Wed Feb 27 13:26:29 CST 2019]; root of context hierarchy
+2019-02-27 13:26:35.587  INFO 15088 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/buyer/restaurant/list],methods=[POST]}" onto public java.util.List<cn.edkso.candiandian.domain.Restaurant> cn.edkso.candiandian.controller.RestaurantController.list(java.lang.Double,java.lang.Double)
+2019-02-27 13:26:35.589  INFO 15088 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/buyer/user/login],methods=[POST]}" onto public cn.edkso.candiandian.domain.User cn.edkso.candiandian.controller.UserController.login(cn.edkso.candiandian.form.UserInfoForm)
+2019-02-27 13:26:35.591  INFO 15088 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-02-27 13:26:35.591  INFO 15088 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-02-27 13:26:35.620  INFO 15088 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-27 13:26:35.620  INFO 15088 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-27 13:26:35.658  INFO 15088 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-27 13:26:36.177  INFO 15088 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-02-27 13:26:36.193  INFO 15088 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8080"]
+2019-02-27 13:26:36.203  INFO 15088 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8080"]
+2019-02-27 13:26:36.215  INFO 15088 --- [main] o.a.tomcat.util.net.NioSelectorPool      : Using a shared selector for servlet write/read
+2019-02-27 13:26:36.230  INFO 15088 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-02-27 13:26:36.235  INFO 15088 --- [main] c.e.candiandian.CandiandianApplication   : Started CandiandianApplication in 7.424 seconds (JVM running for 8.535)
+2019-02-27 13:27:32.604  INFO 15088 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[localhost].[/candiandian]   : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-02-27 13:27:32.604  INFO 15088 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-02-27 13:27:32.632  INFO 15088 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms

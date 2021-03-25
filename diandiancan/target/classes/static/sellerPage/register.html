@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册</title>
+		<link rel="stylesheet" type="text/css" href="css/register.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<script type="text/javascript" src="js/jquery-1.12.4.min.js">		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="con fr">
+			<div class="title clearfix">
+				<h1>用户注册</h1>
+				<a href="login.html">登录</a>
+			</div>
+			<div class="form clearfix">
+				<div>
+				<ul>
+					<li>
+						<label>用户名:</label>
+						<input type="text" name="user_name" id="user_name">
+						<span class="error">提示信息</span>
+					</li>					
+					<li>
+						<label>密码:</label>
+						<input type="password" name="pwd" id="pwd">
+						<span class="error">提示信息</span>
+					</li>
+					<li>
+						<label>确认密码:</label>
+						<input type="password" name="cpwd" id="cpwd">
+						<span class="error">提示信息</span>
+					</li>
+					<li>
+						<label>联系电话:</label>
+						<input type="text" name="cpwd" id="phone">
+						<span class="error">提示信息</span>
+					</li>
+					<li>
+						<label>餐厅编号:</label>
+						<input type="text" name="code" id="code">
+						<span class="error">提示信息</span>
+					</li>
+
+					<li class="register" >注册</li>
+				</ul>				
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+
+	var error_name = false;
+	var error_password = false;
+	var error_check_password = false;
+	var error_check = false;
+	var error_phone = false;
+	var error_code = false;
+
+	// 元素失去焦点
+	$('#user_name').blur(function() {
+		check_user_name();
+	});
+
+	$('#code').blur(function() {
+		check_code();
+	});
+
+	$('#pwd').blur(function() {
+		check_pwd();
+	});
+
+	$('#cpwd').blur(function() {
+		check_cpwd();
+	});
+	$('#phone').blur(function() {
+		check_user_phone();
+	});
+
+	
+
+	$('#allow').click(function() {
+		if($(this).is(':checked'))
+		{
+			error_check = false;
+			$(this).siblings('span').hide();
+		}
+		else
+		{
+			error_check = true;
+			$(this).siblings('span').html('请勾选同意');
+			$(this).siblings('span').show();
+		}
+	});
+	
+	
+
+
+	function check_user_name(){
+		var len = $('#user_name').val().length;
+		if(len<5||len>20)
+		{
+			$('#user_name').next().html('请输入5-20个字符的用户名')
+			$('#user_name').next().show();
+			error_name = true;
+		}
+		else
+		{
+			$('#user_name').next().hide();
+			error_name = false;
+		}
+	}
+
+	function check_code() {
+		var code =$('#code').val();
+		var ex = /^\d+$/;
+		if (!ex.test(code)) {
+			$('#code').next().html('餐厅编号有误！')
+			$('#code').next().show();
+			error_code = true;
+		}
+		else{
+			$('#code').next().hide();
+			error_code = false;
+		}
+	}
+
+	function check_pwd(){
+		var len = $('#pwd').val().length;
+		if(len<8||len>20)
+		{
+			$('#pwd').next().html('密码最少8位，最长20位')
+			$('#pwd').next().show();
+			error_password = true;
+		}
+		else
+		{
+			$('#pwd').next().hide();
+			error_password = false;
+		}		
+	}
+	function check_cpwd(){
+		var pass = $('#pwd').val();
+		var cpass = $('#cpwd').val();
+
+		if(pass!=cpass)
+		{
+			$('#cpwd').next().html('两次输入的密码不一致')
+			$('#cpwd').next().show();
+			error_check_password = true;
+		}
+		else
+		{
+			$('#cpwd').next().hide();
+			error_check_password = false;
+		}		
+		
+	}
+	
+	
+	function check_user_phone(){
+		var phone = document.getElementById('phone').value;
+		
+    	if(!(/^1[34578]\d{9}$/.test(phone))){ 
+        	$('#phone').next().html('请输入正确的电话号')
+        	$('#phone').next().show();
+        	error_phone = true;
+        }
+        else{
+        	$('#phone').next().hide();
+        	error_check = false;
+        }
+   }
+	
+
+	
+})
+	</script>
+	<script type="text/javascript">
+		$('.register').bind('click' ,function(){
+			console.log(111);
+			var pass = $('#pwd').val();
+			var cpass = $('#cpwd').val();
+			var phone = $('#phone').val();
+			var len = $('#user_name').val().length
+			var name = $('#user_name').val();
+			var code = $('#code').val();
+			var ex = /^\d+$/;
+			var myDate = new Date();
+			var str="";
+			str=myDate.getFullYear()+'年'+(myDate.getMonth()+1)+'月'+myDate.getDate()+'日'
+			+myDate.getHours()+'时';
+			
+			console.log("name="+name+"pass="+pass+"cpass="+cpass+"phone="+phone+"len="+len+"str="+str+"code="+code);
+			if(pass==cpass && (len>=5&&len<20) &&(/^1[34578]\d{9}$/.test(phone))&&ex.test(code))
+			{
+				alert(111);
+				data={
+						"username":name,
+						//"user_name":name,
+						"password":pass,
+						//"user_pwd":pass,
+						"phone":phone,
+						//"user_phone":phone,
+						//"user_uptime":str,
+						//"user_res":select
+						"restaurantId":code
+						
+				}//data:{"data":JSON.stringify(data)},//转换成JSON字符串
+				//console.log(data);
+				//console.log(JSON.stringify(data));
+				$.ajax({
+					type:"post",
+					url:"/candiandian/seller/user/register",
+					//url:"http://localhost:8080/candiandian/register.action",
+					async:true,
+					data:data, /*s 手动封装 */
+					//data:data,// 对象自动封装
+					dataType:"json",//从服务器返回数据类型
+					success:function(data){
+						//console.log("-----------------------------"+data);
+						//console.log(data.user_phone+data.user_name);
+						alert("注册成功，请登录");
+						window.location.href = "/candiandian/sellerPage/login.html"
+						console.log(data);
+					},
+				 	error:function(data){
+						alert("服务器繁忙！");
+						
+						console.log(data);
+					} 
+				});
+			}
+			else{
+				
+			}
+		})
+	</script>
+</html>
+
+
+
+

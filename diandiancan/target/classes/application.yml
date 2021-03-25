@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://edkso.cn/candiandian?useUnicode=true&characterEncoding=UTF-8
+  redis:
+    host: edkso.cn
+    port: 6379
+  session:
+    store-type: none
+#  jpa:
+#    show-sql: true
+#  resources:
+#    static-locations: =classpath:static/,file:static/
+
+#  jackson:
+#    default-property-inclusion: NON_NULL
+server:
+  context-path: /candiandian

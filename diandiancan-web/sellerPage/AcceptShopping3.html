@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/AcceptShopping.css"/>
+	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			ajax(1,"afx");
+		})
+
+		function ajax(page = 1,bar=''){
+			data={
+				"page":page,
+				"size":3
+			}
+			$.ajax({
+				type:"post",
+				url:"/candiandian/seller/order/finishOrder",
+				async:true,
+				data:data,
+				dataType:"json" ,// 从服务器返回的数据类型
+				success:function(data){
+					console.log(data)
+					console.log(data.date);
+					//var arr = new Array();
+					$('.order_list1').css({display:"block"});
+					$('.order_list2').css({display:"block"});
+					$('.order_list3').css({display:"block"});
+					arr = data.date;
+					console.log("arr="+arr.length);
+					if(arr.length<2){
+						$('.order_list2').css({display:"none"});
+						$('.order_list3').css({display:"none"});
+					}
+					if(arr.length<3){
+						$('.order_list3').css({display:"none"});
+					}
+					console.log(data);
+					console.log(data.date);   // 得到data数组
+					$.each(data.date,function(index,item){
+
+						var order_id = item.id;  // 获取到订单id
+						var order_name = item.linkman; // 获取到订单用户名
+						var order_time = item.createTime; // 获取到订单创建时间
+						// ul头设置订单详情
+						var id1 = ".order_list"+(index+1)+" ul li:eq(0)";
+						$(id1).html(order_time);
+						var id2 = ".order_list"+(index+1)+" ul li:eq(1)";
+						$(id2).html("订单号:"+order_id);
+						var id3 = ".order_list"+(index+1)+" ul li:eq(2)";
+						$(id3).html("订单用户名:"+order_name);
+						/**
+						 * 设置订单中具体的食物
+						 */
+						$.each(item.orderDetailList,function(key,value){
+							var food_img = value.productIcon;
+							var food_name = value.productName;
+							var food_price = value.productPrice;
+							var food_num = value.productNum;
+							if(item.orderDetailList.length>1){
+								if(key == 0){
+									var id8 = ".order_list"+(index+1)+" table";
+									console.log("id8="+id8);
+									$(id8).addClass('order_table_2');
+									var id9 = ".order_list"+(index+1)+" table tr td:eq(0)";
+									console.log("id9="+id9);
+									$(id9).append("<ul class='order_table_ul clearfix'>"+
+											"<li class='table_li01'><img src='"+food_img+"'/></li>"+
+											"<li class='table_li02'>"+food_name+"</li>"+
+											"<li class='table_li03'>"+food_num+"(份)</li>"+
+											"<li class='table_li04'>"+food_price+"(元)</li></ul>");
+								}else{
+									var id4 = ".order_list"+(index+1)+" table ul:eq(0) li:eq(0) img ";
+									console.log("id4="+id4);
+									$(id4).attr("src",food_img);
+									var id5 = ".order_list"+(index+1)+" table ul:eq(0) li:eq(1) ";
+									$(id5).html(food_name);
+									var id6 = ".order_list"+(index+1)+" table ul:eq(0) li:eq(2) ";
+									$(id6).html(food_num+"(份)");
+									var id7 = ".order_list"+(index+1)+" table ul:eq(0) li:eq(3) ";
+									$(id7).html(food_price+"(元)");
+								}
+							}else{
+								var id4 = ".order_list"+(index+1)+" table ul li:eq(0) img";
+								$(id4).attr("src",food_img);
+								var id5 = ".order_list"+(index+1)+" table ul li:eq(1) ";
+								$(id5).html(food_name);
+								var id6 = ".order_list"+(index+1)+" table ul li:eq(2) ";
+								$(id6).html(food_num+"(份)");
+								var id7 = ".order_list"+(index+1)+" table ul li:eq(3) ";
+								$(id7).html(food_price+"(元)");
+							}
+						});
+						var total_price = item.totalPrice;// 总价钱
+						var id10 = ".order_list"+(index+1)+" table tr td:eq(1)";
+						$(id10).html(total_price+"(元)");
+
+					});
+					/**
+					 * 导航条
+					 */
+					if(bar=='afx'){
+						//var page = 1; // 总页数
+						var page = data.totalPages;
+						var ul = $('#bar_ul');
+						ul.append("<li><a href='#'>&laquo;</a></li>");
+						for(var i=1;i<=page;i++){
+							console.log("进入循环");
+							var order = "order_list"+i;
+							if (i==1)
+							{ul.append("<li><a id="+i+" onclick='a_click("+i+")'>"+i+"</a></li>");}
+							else
+							{ul.append("<li><a id="+i+" onclick='a_click("+i+")'>"+i+"</a></li>");}
+						}
+						ul.append("<li><a href='#'>&raquo;</a></li>");
+					}
+				},
+				error:function(){
+					alert("服务器繁忙！");
+				}
+			});
+		}//
+	</script>
+	<title></title>
+</head>
+<body>
+<div class="order">
+	<div class="order_title" style="font-size: 16px;height: 30px;line-height: 30px">
+		所有订单
+	</div>
+	<div class="order_list1 " style="width: 1200px;height: 150px;margin-bottom: 26px;color: #666;font-size: 14px;">
+		<ul class="order_list_ul clearfix">
+			<li class="li01"></li>
+			<li class="li02"></li>
+			<li class="li03"></li>
+			<li class="li04"></li>
+		</ul>
+		<table class="order_list1_table ">
+			<tr>
+				<td width="55%">
+					<ul class="order_table_ul clearfix">
+						<li class="table_li01"><img /></li>
+						<li class="table_li02"></li>
+						<li class="table_li03"></li>
+						<li class="table_li04"></li>
+					</ul>
+				</td>
+				<td width="15%"></td>
+				<td width="15%">已付款</td>
+				<!--id为订单编号 -->
+				<td width="15%"><a  id="123"  onclick="order_hidden('123')" style="cursor: pointer;"  class="oper_btn" >已完成</a></td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="order_list2" style="width: 1200px;height: 150px;margin-bottom: 26px;color: #666;font-size: 14px;">
+		<ul class="order_list_ul clearfix">
+			<li class="li01"></li>
+			<li class="li02"></li>
+			<li class="li03"></li>
+			<li class="li04"></li>
+		</ul>
+		<table class="order_list1_table">
+			<tr>
+				<td width="55%">
+					<ul class="order_table_ul clearfix">
+						<li class="table_li01"><img /></li>
+						<li class="table_li02"></li>
+						<li class="table_li03"></li>
+						<li class="table_li04"></li>
+					</ul>
+
+				</td>
+				<td width="15%"></td>
+				<td width="15%">已付款</td>
+				<td width="15%"><a id="234" onclick="order_hidden('234')" style="cursor: pointer;" class="oper_btn">已完成</a></td>
+			</tr>
+		</table>
+	</div>
+	<div class="order_list3" style="width: 1200px;height: 150px;color: #666;font-size: 14px;">
+		<ul class="order_list_ul clearfix">
+			<li class="li01"></li>
+			<li class="li02"></li>
+			<li class="li03"></li>
+			<li class="li04"></li>
+		</ul>
+		<table class="order_list1_table">
+			<tr>
+				<td width="55%">
+					<ul class="order_table_ul clearfix">
+						<li class="table_li01"><img /></li>
+						<li class="table_li02"></li>
+						<li class="table_li03"></li>
+						<li class="table_li04"></li>
+					</ul>
+				</td>
+				<td width="15%"></td>
+				<td width="15%">已付款</td>
+				<td width="15%"><a id="345" onclick="order_hidden('345')" style="cursor: pointer;" class="oper_btn">已完成</a></td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="bar">
+		<ul class="pagination" id="bar_ul">
+		</ul>
+	</div>
+
+</div>
+</body>
+<script type="text/javascript">
+
+	function order_hidden(id){
+		var a=document.getElementById(id);
+		console.log(a.parentNode.nodeName);   //td
+		var div=a.parentNode.parentNode.parentNode.parentNode.parentNode;//div
+		div.style.display="none";
+		console.log(div.nodeName);
+
+	}
+
+	function a_click(id){
+
+
+		console.log("导航条id="+id);
+		$('.order_list1 table').removeClass('order_table_2');
+		$('.order_list2 table').removeClass('order_table_2');
+		$('.order_list3 table').removeClass('order_table_2');
+
+		$('.order_list1 table ul:eq(0)').siblings().remove();
+		$('.order_list2 table ul:eq(0)').siblings().remove();
+		$('.order_list3 table ul:eq(0)').siblings().remove();
+
+
+		ajax(id)
+	}
+</script>
+</html>

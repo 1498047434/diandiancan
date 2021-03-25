@@ -1,0 +1,12 @@
+
+
+
+#example_wrapper{
+		width: 99%;
+		margin: 0 auto;
+		margin-top: 20px;
+}
+
+#example_wrapper tr td{
+	height: 30px;
+}

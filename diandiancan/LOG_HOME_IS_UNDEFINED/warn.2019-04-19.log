@@ -1,0 +1,11 @@
+2019-04-19 21:27:54.892  WARN 4216 --- [restartedMain] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-19 21:27:55.856  WARN 4216 --- [restartedMain] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-04-19 21:39:54.124  WARN 760 --- [restartedMain] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-19 21:39:54.738  WARN 760 --- [restartedMain] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-04-19 21:40:51.839  WARN 760 --- [restartedMain] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-19 21:40:51.909  WARN 760 --- [restartedMain] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2019-04-19 22:10:37.990  WARN 760 --- [http-nio-8080-exec-2] net.sf.json.JSONObject                   : Tried to assign property language:java.lang.String to bean of class cn.edkso.candiandian.domain.User
+2019-04-19 22:10:37.990  WARN 760 --- [http-nio-8080-exec-7] net.sf.json.JSONObject                   : Tried to assign property language:java.lang.String to bean of class cn.edkso.candiandian.domain.User
+2019-04-19 22:10:39.266  WARN 760 --- [http-nio-8080-exec-4] net.sf.json.JSONObject                   : Tried to assign property language:java.lang.String to bean of class cn.edkso.candiandian.domain.User
+2019-04-19 22:20:59.701  WARN 760 --- [http-nio-8080-exec-2] net.sf.json.JSONObject                   : Tried to assign property language:java.lang.String to bean of class cn.edkso.candiandian.domain.User
+2019-04-19 22:21:07.288  WARN 760 --- [http-nio-8080-exec-8] net.sf.json.JSONObject                   : Tried to assign property language:java.lang.String to bean of class cn.edkso.candiandian.domain.User

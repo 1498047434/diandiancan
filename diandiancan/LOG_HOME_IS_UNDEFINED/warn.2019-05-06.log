@@ -1,0 +1,2 @@
+2019-05-06 11:49:40.404  WARN 5324 --- [restartedMain] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-05-06 11:49:41.107  WARN 5324 --- [restartedMain] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis

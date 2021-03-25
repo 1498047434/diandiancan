@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/waitAcceptShopping.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<script type="text/javascript" src="js/jquery-1.12.4.min.js">
+			
+		</script>
+		<script type="text/javascript">
+            $(function(){
+                ajax();
+            })
+
+            function ajax( page = 1 ){
+                data={
+                    "page":1,
+                    "size":3
+                }
+                $.ajax({
+                    type:"post",
+                    url:"/candiandian/seller/order/waitOrder",
+                    async:true,
+                    data:data,
+                    dataType:"json" ,// 从服务器返回的数据类型
+                    success:function(data){
+
+                        $.each(data.date,function(index,item){
+
+							var div1_class = "div_"+index;
+                            var div_class = ".div_"+index;
+                            var ch = " \""+item.id+"\" ";
+                            //alert(ch);
+                            $('.order').append(
+                            "<div class='order_list "+div1_class+"' style='width: 1200px;height: 150px;color: #666;font-size: 14px;'>"+
+                                "<ul class='order_list_ul clearfix'>"+
+                                "<li class='li01'></li>"+
+                                "<li class='li02'></li>"+
+                                "<li class='li03'></li>"+
+                                "<li class='li04' style='color: red'>点餐</li>"+
+                                "</ul>"+
+                                "<table class='order_list1_table'>"+
+                                "<tr>"+
+                                "<td width='55%'>"+
+                                "<ul class='order_table_ul clearfix'>"+
+                                "<li class='table_li01'><img src=''></li>"+
+                            	"<li class='table_li02'></li>"+
+                            	"<li class='table_li03'>用户名</li>"+
+								"<li class='table_li04' ></li>"+
+                            	"</ul>"+
+                            	"</td>"+
+                            	"<td width='15%'></td>"+
+                            	"<td width='15%'>已付款</td>"+
+                            	"<td width='15%'><a  id='"+item.id+"' onclick='order_hidden("+ch+")'  style='cursor: pointer;' class='oper_btn' >确认接收</a></td>"+
+                            "</tr>"+
+                            "</table>"+
+                            "</div>");
+                            var order_id = item.id;  // 获取到订单id
+                            var order_name = item.linkman; // 获取到订单用户名
+                            var order_time = item.createTime; // 获取到订单创建时间
+                            // ul头设置订单详情
+                            var id1 = div_class+" ul li:eq(0)";
+                            $(id1).html(order_time);
+                            var id2 = div_class+" ul li:eq(1)";
+
+                            $(id2).html(order_id);
+                            var id3 = div_class+" ul li:eq(2)";
+                            $(id3).html(order_name);
+                            /**
+                             * 设置订单中具体的食物
+                             */
+                            //var id = "#"+order_id;
+                            //a_id = $(id);
+                           // alert(a_id.html());
+							//alert(a_id.parent().attr("width"));
+							// 获取div标签
+                           //console.log(a_id.parent().parent().parent().parent().parent().attr("class"));
+                           //order_div = a_id.parent().parent().parent().parent().parent();
+
+                            $.each(item.orderDetailList,function(key,value){
+                                var food_img = value.productIcon;
+                                var food_name = value.productName;
+                                var food_price = value.productPrice;
+                                var food_num = value.productNum;
+                                if(item.orderDetailList.length>1){
+                                    if(key == 0){
+                                        var id8 = div_class+" table";
+                                        //console.log(order_div);
+                                        console.log(id8);
+                                        $(id8).addClass('order_table_2');
+                                        var id9 = div_class+" table tr td:eq(0)";
+                                        console.log("id9="+id9);
+                                        $(id9).append("<ul class='order_table_ul clearfix'>"+
+                                            "<li class='table_li01'><img src='"+food_img+"'/></li>"+
+                                            "<li class='table_li02'>"+food_name+"</li>"+
+                                            "<li class='table_li03'>"+food_num+"(份)</li>"+
+                                            "<li class='table_li04'>"+food_price+"(元)</li></ul>");
+                                    }else{
+                                        var id4 = div_class+" table ul:eq(0) li:eq(0) img";
+                                        $(id4).attr("src",food_img);
+                                        var id5 = div_class+" table ul:eq(0) li:eq(1) ";
+                                        $(id5).html(food_name);
+                                        var id6 = div_class+" table ul:eq(0) li:eq(2) ";
+                                        $(id6).html(food_num+"(份)");
+                                        var id7 = div_class+" table ul:eq(0) li:eq(3) ";
+                                        $(id7).html(food_price+"(元)");
+                                    }
+                                }else{
+                                    var id4 = div_class+" table ul li:eq(0) img";
+                                    $(id4).attr("src",food_img);
+                                    var id5 = div_class+" table ul li:eq(1) ";
+                                    $(id5).html(food_name);
+                                    var id6 = div_class+" table ul li:eq(2) ";
+                                    $(id6).html(food_num+"(份)");
+                                    var id7 = div_class+" table ul li:eq(3) ";
+                                    $(id7).html(food_price+"(元)");
+                                }
+                            });
+                            var total_price = item.totalPrice;// 总价钱
+                            var id10 =  div_class+" table tr td:eq(1)";
+                            $(id10).html(total_price+"元");
+
+                        });
+
+                    }
+                });
+            }
+		</script>
+		<title></title>
+	</head>
+	<body>
+		<div class="order">
+			<div class="order_title">
+				全部订单
+			</div>
+
+
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			$('#123').bind('click',function(){
+				//alert($(this).parent());
+//				$(this).parent().parent().parent().parent().css({display:"none"})
+				$('.w980').hide();
+			});
+		});
+		function order_hidden(id){
+			console.log(id);
+				var a=document.getElementById(id);
+				var div=a.parentNode.parentNode.parentNode.parentNode.parentNode;//div
+				div.style.display="none";
+			data = {
+				id : id
+			}
+			$.ajax({
+				type:"post",
+				url:"/candiandian/buyer/order/receivedOrder",
+				async:true,
+				data:data,
+				dataType:"json" ,// 从服务器返回的数据类型
+				success:function(data){
+					console.log("接受订单成功");
+				}
+			})
+
+			}
+	</script>
+</html>
